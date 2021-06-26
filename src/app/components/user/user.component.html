@@ -1,13 +1,13 @@
 
-<div *ngIf="!isLogged"> 
+
+<ng-container *ngIf="!isLogged; else loggeado">
     <button (click)="login()">Iniciar sesión</button>
-    <button (click)="register()">
+    <button (click)="register()" *ngIf="!isRegistred">
         {{ isRegistred?"Registrado !!":"Registrar" }}
     </button>
-</div>
-
-<div *ngIf="isLogged">
+</ng-container>
+<ng-template #loggeado>
     <p>Usuario loggeado !!</p>
     <button (click)="logout()">Salir de sesión</button>
-</div>
-
+    <button (click)="deleteUser()">Eliminar usuario</button>
+</ng-template>

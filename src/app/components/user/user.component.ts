@@ -25,4 +25,9 @@ export class UserComponent {
   logout() {
     this.isLogged = false;
   }
+
+  deleteUser() {
+    this.isLogged = false;
+    this.isRegistred = false;
+  }
 }
