@@ -1,0 +1,13 @@
+
+<div *ngIf="!isLogged"> 
+    <button (click)="login()">Iniciar sesión</button>
+    <button (click)="register()">
+        {{ isRegistred?"Registrado !!":"Registrar" }}
+    </button>
+</div>
+
+<div *ngIf="isLogged">
+    <p>Usuario loggeado !!</p>
+    <button (click)="logout()">Salir de sesión</button>
+</div>
+
