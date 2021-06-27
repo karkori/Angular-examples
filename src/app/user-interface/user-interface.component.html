@@ -3,3 +3,12 @@
     user: <br>
     {{ userToString }}
 </p>
+<p>name: {{user.name}}</p>
+<input type="text" [(ngModel)]="user.name"/> 
+ <br>
+<select [(ngModel)]="profesion " name="profesion" id="profesion">
+    <option value="profesor">profesor</option>
+    <option value="director">director</option>
+    <option value="médico">médico</option>
+</select>
+<p>profesion : {{ profesion }}</p>

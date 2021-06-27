@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { User, UserType } from '../interfaces/user'
 
 @Component({
@@ -19,5 +19,6 @@ export class UserInterfaceComponent {
 
   userToString = JSON.stringify(this.user)
   
+  profesion = ''
 
 }
